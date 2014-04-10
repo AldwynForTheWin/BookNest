@@ -9,3 +9,7 @@ from booksys.models import Publisher, Department, Category, Author, Book
 # 	inlines = [AuthorInline, DepartmentInline, PublisherInline, CategoryInline]
 
 admin.site.register(Book)
+admin.site.register(Author)
+admin.site.register(Department)
+admin.site.register(Publisher)
+admin.site.register(Category)
