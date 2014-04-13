@@ -1,0 +1,39 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'BookNest' %}</h1>
+{% endblock %}
+
+{% block content %}
+<style type="text/css">
+	table {
+		width: 100%;
+	}
+	th {
+		width: 40%;
+	}
+</style>
+<h2>{{ book.title }}</h2>
+<fieldset>
+	<legend>Details</legend>
+	<table>
+		<tr>
+			<th>Title</th>
+			<td>{{ book.title }}</td>
+		</tr>
+		<tr>
+			<th>Date of Publication</th>
+			<td>{{ book.pub_date }}</td>
+		</tr>
+		<tr>
+			<th>Author</th>
+			<td>{{ book.author }}</td>
+		</tr>
+	</table>
+</fieldset>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
